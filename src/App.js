@@ -7,7 +7,6 @@ import { observer } from 'mobx-react';
 class App extends React.Component {
   render() {
     const { sortedTasks } = store;
-
     return (
       <div className="App">
         <h1 className="top">Active tasks: {store.activeTasksCount}</h1>
@@ -16,7 +15,7 @@ class App extends React.Component {
             doneTask={() => store.doneTask(task.id)}
             deleteTask={() => store.deleteTask(task.id)}
             task={task}
-            key={task.id}
+            key={task.id}   
           ></Task>
         ))}
         <TaskInput addTask={v => store.addTask(v)}></TaskInput>

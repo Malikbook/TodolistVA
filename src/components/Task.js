@@ -1,14 +1,15 @@
 import React from 'react';
 
 const Task = ({ task, ...props }) => {
+  console.log()
   const ActionBtn = () => (
     <div className="action-btn">
       {!task.done ? (
-        <span aria-label="done" role="img" onClick={props.doneTask}>
+        <span style={{display: 'block', marginTop: '10px'}} aria-label="done" role="img" onClick={props.doneTask}>
           ✔️
         </span>
       ) : (
-        <span aria-label="delete" role="img" onClick={props.deleteTask}>
+        <span style={{display: 'block', marginTop: '10px'}} aria-label="delete" role="img" onClick={props.deleteTask}>
           ❌
         </span>
       )}
@@ -19,7 +20,11 @@ const Task = ({ task, ...props }) => {
 
   return (
     <div className={className}>
-      <p>{task.title}</p>
+      <ul style={{listStyle: 'none'}}>
+        <li><b>{task.title}</b>
+          <p>{}</p>
+        </li>
+      </ul>
       <ActionBtn></ActionBtn>
     </div>
   );

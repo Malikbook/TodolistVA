@@ -18,12 +18,12 @@ code {
 }
 
 :root {
-  --text: #04395e;
+  --text: #dd8219;
 }
 
 .App {
   margin: 30px 0 0 30px;
-  width: 500px;
+  width: 900px;
   border-radius: 10px;
   box-shadow: 0 3px 15px #0000001a;
   overflow: hidden;
@@ -41,10 +41,10 @@ code {
 }
 
 .task-input {
+  display: flex;
   border-radius: 5px;
   margin-top: 10px;
   background-color: var(--text);
-  display: flex;
   padding: 5px;
 }
 
@@ -52,9 +52,9 @@ code {
   border-radius: 5px;
 }
 
-.task-input input {
-  width: 100%;
-  border: none;
+.task-input input{
+  width: 97%;
+  border: 1px solid black;
   padding: 5px;
   font-size: 18px;
   font-weight: 500;
@@ -68,7 +68,6 @@ code {
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
-  margin-left: 10px;
 }
 
 .task {
@@ -80,7 +79,7 @@ code {
 }
 
 .task:hover {
-  background-color: #04395e3d;
+  background-color: #f0ed61c4;
 }
 
 .task p {
@@ -102,6 +101,6 @@ code {
   margin-left: 10px;
 }
 .action-btn:hover {
-  background-color: #04395e3d;
+  background-color: #d6fa083d;
   border-radius: 5px;
 }

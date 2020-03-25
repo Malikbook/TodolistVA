@@ -5,7 +5,8 @@ class TaskInput extends React.Component {
     super(props);
 
     this.state = {
-      input: ''
+      input: '',
+      textarea: ''
     };
   }
 
@@ -14,6 +15,11 @@ class TaskInput extends React.Component {
     if (input) {
       this.props.addTask(input);
       this.setState({ input: '' });
+    };
+    const { textarea } = this.state;
+    if (textarea) {
+      this.props.addTask(textarea);
+      this.setState({ textarea: '' });
     }
   };
 
@@ -25,13 +31,16 @@ class TaskInput extends React.Component {
     this.setState({ input: event.target.value });
   };
 
+  textarChange = event => {
+    this.setState({ textarea: event.target.value });
+  };
+
   render() {
     const { input } = this.state;
 
     return (
       <div className="task-input">
         <input
-          onKeyPress={this.handleEnter}
           onChange={this.inputChange}
           value={input}
         ></input>
